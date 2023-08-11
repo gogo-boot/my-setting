@@ -1,0 +1,69 @@
+= My Setting
+This is private purpose git repository. It contains short CLI command for quick seting for my MacOS, in case i lost my Mac or replace it. I want to reffernce this document.
+
+
+== Installing Brew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+== Installing Dev-Tools
+
+
+```
+❯ brew update
+❯ brew install formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
+gradle htop hugo jenv openjdk@17 jq maven nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
+plantuml postgresql pyenv; \
+❯ brew install cask dbeaver-community gureumkim rectangle docker 
+```
+
+
+== Set up Terminal
+```
+# install iTerm2 manually
+https://iterm2.com/index.html
+
+# install oh my zsh
+❯ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# powerlevel10k config
+❯ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+p10k configure
+```
+
+== Set up language version manager
+Java installation
+```
+$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(jenv init -)"' >> ~/.zshrc
+
+jenv doctor
+jenv versions
+jenv global ${the version you have}
+```
+
+Python installation
+```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+pyenv install 3.10.4
+pyenv global 3.10
+```
+
+Go installation
+```
+echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.zshrc
+echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(goenv init -)"' >> ~/.zshrc
+echo 'export PATH="$GOROOT/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.zshrc
+
+goenv install 1.12.0
+goenv global 1.12.0
+
+
+```
