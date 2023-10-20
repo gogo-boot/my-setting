@@ -14,9 +14,9 @@ This is private purpose git repository. It contains short CLI command for quick 
 ```
 ❯ brew update
 ❯ brew install formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
-gradle htop hugo jenv openjdk@17 jq maven nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
+gradle htop hugo jenv jq maven nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
 plantuml postgresql pyenv; \
-❯ brew install cask dbeaver-community gureumkim rectangle docker 
+❯ brew install cask dbeaver-community gureumkim rectangle docker corretto17
 ```
 
 
