@@ -14,7 +14,7 @@ This is private purpose git repository. It contains short CLI command for quick 
 ```
 ❯ brew update
 ❯ brew install formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
-gradle htop hugo jenv jq maven nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
+gradle htop hugo jenv jq maven gradle nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
 plantuml postgresql pyenv podman-compose; \
 ❯ brew install cask dbeaver-community gureumkim rectangle corretto17 podman-desktop
 ```
@@ -34,6 +34,7 @@ p10k configure
 ```
 
 == Set up ssh
+It uses Mac Keychain app to use password required private key. It will not ask the private key password.
 ```
 echo 'Host *' >> .ssh/config
 echo '   UseKeychain yes' >> .ssh/config
