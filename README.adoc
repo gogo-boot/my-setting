@@ -33,6 +33,14 @@ https://iterm2.com/index.html
 p10k configure
 ```
 
+== Set up ssh
+```
+echo 'Host *' >> .ssh/config
+echo '   UseKeychain yes' >> .ssh/config
+echo '   AddKeysToAgent yes' >> .ssh/config
+echo '   IdentityFile ~/.ssh/id_rsa' >> .ssh/config
+```
+
 == Set up language version manager
 Java installation
 ```
