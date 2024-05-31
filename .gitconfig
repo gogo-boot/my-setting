@@ -9,8 +9,8 @@
 [fetch]
 	prune = true
 
-[includeIf "gitdir:/Users/jinwoowang/project/gogo-boot/"]
-	path = /Users/jinwoowang/project/gogo-boot/my-setting/.gitconfig-personal
+[includeIf "gitdir:~/project/gogo-boot/"]
+	path = ~/project/gogo-boot/my-setting/.gitconfig-personal
 
 [includeIf "gitdir:~/project/ifp/**"]
 	path = ~/project/ifp/.gitconfig-work

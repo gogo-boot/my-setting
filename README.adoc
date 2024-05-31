@@ -47,7 +47,7 @@ echo '   IdentityFile ~/.ssh/id_rsa' >> .ssh/config
 
 == Set up .gitconfig
 ```
-ln -s ~/project/gogo-boot/my-setting/.gitconfig .gitcofig
+ln -s ~/project/gogo-boot/my-setting/.gitconfig .gitconfig
 ```
 
 == Set up language version manager
