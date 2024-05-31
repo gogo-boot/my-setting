@@ -13,10 +13,10 @@ This is private purpose git repository. It contains short CLI command for quick 
 
 ```
 ❯ brew update
-❯ brew install formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
-gradle htop hugo jenv jq maven gradle nodenv openshift-cli romkatv/powerlevel10k/powerlevel10k \
+❯ brew install --formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
+gradle htop hugo jenv jq maven gradle nodenv openshift-cli powerlevel10k \
 plantuml postgresql pyenv podman-compose; \
-❯ brew install cask dbeaver-community gureumkim rectangle corretto17 podman-desktop
+❯ brew install --cask dbeaver-community gureumkim rectangle corretto@17 podman-desktop jumpcut
 ```
 
 
@@ -29,7 +29,10 @@ https://iterm2.com/index.html
 ❯ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # powerlevel10k config
-❯ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+> echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+# Restart Zsh
+exec zsh
+# Configure
 p10k configure
 ```
 
@@ -42,11 +45,25 @@ echo '   AddKeysToAgent yes' >> .ssh/config
 echo '   IdentityFile ~/.ssh/id_rsa' >> .ssh/config
 ```
 
+== Set up .gitconfig
+```
+ln -s ~/project/gogo-boot/my-setting/.gitconfig .gitcofig
+```
+
 == Set up language version manager
 Java installation
 ```
 $ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
 $ echo 'eval "$(jenv init -)"' >> ~/.zshrc
+# To have JAVA_HOME get set by jEnv, enable the export plugin. This needs to be done in an initialised shell:
+$ jenv enable-plugin export
+# Restart your shell
+exec $SHELL -l
+
+# Adding Your Java Environment
+sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+jenv add "$(/usr/libexec/java_home)" # this will always default to the latest version in /Library/Java/JavaVirtualMachines
+
 
 jenv doctor
 jenv versions

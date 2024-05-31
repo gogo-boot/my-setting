@@ -1,0 +1,16 @@
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+[fetch]
+	prune = true
+
+[includeIf "gitdir:/Users/jinwoowang/project/gogo-boot/"]
+	path = /Users/jinwoowang/project/gogo-boot/my-setting/.gitconfig-personal
+
+[includeIf "gitdir:~/project/ifp/**"]
+	path = ~/project/ifp/.gitconfig-work
