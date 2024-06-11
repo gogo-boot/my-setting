@@ -15,10 +15,12 @@ This is private purpose git repository. It contains short CLI command for quick 
 ❯ brew update
 ❯ brew install --formula aws-sam-cli awscli dos2unix ffmpeg git glab goenv goreleaser \
 gradle htop hugo jenv jq maven gradle nodenv openshift-cli powerlevel10k \
-plantuml postgresql pyenv podman-compose; \
-❯ brew install --cask dbeaver-community gureumkim rectangle corretto@17 podman-desktop jumpcut
+plantuml postgresql pyenv podman-compose koekeishiya/formulae/yabai koekeishiya/formulae/skhd; 
+❯ brew install --cask dbeaver-community gureumkim corretto@17 podman-desktop jumpcut jordanbaird-icei deskpad
 ```
 
+== Config Yabai
+https://www.josean.com/posts/yabai-setup
 
 == Set up Terminal
 ```
